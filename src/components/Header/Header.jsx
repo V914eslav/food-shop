@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 
+import { Link } from "react-router-dom";
+
 import styles from "./Header.module.css";
 import cn from "classnames";
 
@@ -8,18 +10,15 @@ export default class Header extends Component {
     return (
       <nav className={cn("green", "darken-1", styles.nav)}>
         <div className="nav-wrapper">
-          <a href="/" className="brand-logo">
+          <Link to="/" className="brand-logo">
             React Movies
-          </a>
+          </Link>
           <ul id="nav-mobile" className="right hide-on-med-and-down">
             <li>
-              <a
-                href="https://v914eslav.github.io/trinket-shop/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Repo
-              </a>
+              <Link to="/about">About</Link>
+            </li>
+            <li>
+              <Link to="/contact">Contact</Link>
             </li>
           </ul>
         </div>

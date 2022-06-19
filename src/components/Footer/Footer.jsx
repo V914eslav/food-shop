@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 
+import { Link } from "react-router-dom";
+
 import styles from "./Footer.module.css";
 import cn from "classnames";
 
@@ -17,16 +19,11 @@ export default class Footer extends Component {
             styles.copyright
           )}
         >
-          <div className="container">
+          <div className={cn("container")}>
             © {new Date().getFullYear()} Copyright Text
-            <a
-              className="grey-text text-lighten-4 right"
-              href="https://v914eslav.github.io/trinket-shop/"
-              target="_blank"
-              rel="noreferrer"
-            >
+            <Link className="grey-text text-lighten-4 right" to="/">
               Repo
-            </a>
+            </Link>
           </div>
         </div>
       </footer>

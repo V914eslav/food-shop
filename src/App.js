@@ -13,19 +13,20 @@ import cn from "classnames";
 function App() {
   return (
     <div className="App">
-      <Header />
-      <main className={cn("content", "container", styles.main)}>
-        <Router>
+      <Router>
+        <Header />
+
+        <main className={cn("content", "container", styles.main)}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/contacts" element={<Contact />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
-        </Router>
-      </main>
+        </main>
 
-      <Footer />
+        <Footer />
+      </Router>
     </div>
   );
 }
