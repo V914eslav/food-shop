@@ -6,6 +6,8 @@ import Header from "./components/Header";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import Movie from "./pages/Movie/Movie";
+
 import NotFound from "./pages/NotFound";
 
 import styles from "./App.module.css";
@@ -21,6 +23,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/contacts" element={<Contact />} />
+            <Route path="/movies/:id" element={<Movie />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
