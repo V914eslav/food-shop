@@ -1,16 +1,16 @@
 import React from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useMatch, useLocation } from "react-router-dom";
 
 function Movie() {
   const { id } = useParams();
-  const navigate = useNavigate();
-  console.log(navigate);
+  const value = useMatch();
+  const value2 = useLocation();
+  console.log(value);
+  console.log(value2);
   return (
     <>
       <div>Movie {id}</div>
-      <button className="btn" onClick={() => navigate(-1)}>
-        CLick
-      </button>
+      <button className="btn">CLick</button>
     </>
   );
 }
