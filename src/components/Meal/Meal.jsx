@@ -1,32 +1,26 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
-import styles from "./CategoryItem.module.css";
+import styles from "./Meal.module.css";
 import cn from "classnames";
 
-function CategoryItem(props) {
-  const {
-    idCategory: id,
-    strCategory: name,
-    strCategoryDescription: description,
-    strCategoryThumb: img,
-  } = props;
+function Meal(props) {
+  const { strMeal: name, idMeal: id, strMealThumb: img } = props;
+
   return (
     <div className={cn("card", styles["card-item"])}>
       <div className="card-image">
-        <img src={img} alt={name + id} />
+        <img src={img} alt={name} />
       </div>
       <div className={cn("card-content", styles["card-content-item"])}>
         <span className="card-title">{name}</span>
-        <p>{description.slice(0, 60)}...</p>
       </div>
       <div className="card-action">
-        <Link to={`/category/${name}`} className="btn">
-          Watch Category
+        <Link to={`/mael/${id}`} className={cn("btn", styles["link-btn"])}>
+          Watch recipe
         </Link>
       </div>
     </div>
   );
 }
 
-export default CategoryItem;
+export default Meal;
