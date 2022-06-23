@@ -15,7 +15,7 @@ function Meal(props) {
         <span className="card-title">{name}</span>
       </div>
       <div className="card-action">
-        <Link to={`/mael/${id}`} className={cn("btn", styles["link-btn"])}>
+        <Link to={`/meal/${id}`} className={cn("btn", styles["link-btn"])}>
           Watch recipe
         </Link>
       </div>

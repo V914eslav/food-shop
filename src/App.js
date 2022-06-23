@@ -8,11 +8,12 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Category from "./pages/Category";
+import Recipe from "./pages/Recipe/Recipe";
+
 import NotFound from "./pages/NotFound";
 
 import styles from "./App.module.css";
 import cn from "classnames";
-
 function App() {
   return (
     <div className="App">
@@ -25,10 +26,10 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/contacts" element={<Contact />} />
             <Route path="/category/:name" element={<Category />} />
+            <Route path="/meal/:id" element={<Recipe />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
-
         <Footer />
       </Router>
     </div>
