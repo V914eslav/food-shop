@@ -8,8 +8,7 @@ function Home() {
   useEffect(() => {
     getAllCargories().then((data) => setCatalog(data.categories));
   }, []);
-  // const { idCategory, strCategory, strCategoryDescription, strCategoryThumb } =
-  //   catalog;
+
   return (
     <>{!catalog.length ? <Preloader /> : <CategoryList catalog={catalog} />}</>
   );
