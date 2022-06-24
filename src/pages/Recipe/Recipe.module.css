@@ -5,3 +5,9 @@ iframe {
   width: 600px;
   height: 350px;
 }
+.video-title {
+  margin: 2rem 0 1.5rem;
+}
+.btn-back {
+  margin: 0.5rem 0 2rem;
+}
